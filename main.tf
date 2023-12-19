@@ -16,7 +16,7 @@ data "aws_ami" "app_ami" {
 
 # Create a new ALB Target Group attachment
 resource "aws_autoscaling_attachment" "blog_attachment" {
-  autoscaling_group_name = module.blog_autoscaling.arn
+  autoscaling_group_name = module.blog_autoscaling.id
   lb_target_group_arn    = module.blog_alb.arn
 }
 
