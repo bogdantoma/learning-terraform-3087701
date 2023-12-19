@@ -30,7 +30,7 @@ data "aws_vpc" "default"{
 }
 
 module "blog_sg"{
-  source = "terraform-aws-module/security-group/aws"
+  source = "terraform-aws-modules/security-group/aws"
   version = "4.13.0"
   name = "blog"
 
